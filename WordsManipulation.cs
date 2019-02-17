@@ -8,7 +8,7 @@ namespace PadawansTask8
         public static void RemoveDuplicateWords(ref string text)
         {
             if (text == null) throw new ArgumentNullException();
-            if (text.Length == 0) throw new ArgumentException();
+            if (text.Length <= 0) throw new ArgumentException();
 
             string[] a = text.Split(new char[] { ' ' });
             int s = a.Length - 1;
@@ -17,7 +17,7 @@ namespace PadawansTask8
             {
                 string e = a[q];
                 int m = (e.Length - 1);
-                if (e.Length == 0) continue;
+                if (e.Length <= 0) continue;
                 while ((e[m] == ' ' || e[m] == ',' || e[m] == '!' || e[m] == '?' || e[m] == '-' || e[m] == '.' || e[m] == ';' || e[m] == ':'))
                 {
                     e = e.Substring(0, m);
