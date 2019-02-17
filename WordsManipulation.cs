@@ -22,15 +22,15 @@ namespace PadawansTask8
                     if (q == s) break;
                     if (a[i] == a[q])
                     {
-                        a[i] = " ";
+                        a[i] = "";
                     }
 
                 }
 
-                if (q == s && a[q]==" ") break;
-                if (q == s && a[q] != " ") { text += a[q]; break; }
+                if (q == s && a[q]=="") break;
+                if (q == s && a[q] != "") { text += a[q]; break; }
 
-                if (a[q] == " ") text += a[q];
+                if (a[q] == "") text += " ";
                 else
                 {
                     text += a[q] + " ";
