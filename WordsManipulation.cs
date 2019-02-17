@@ -10,7 +10,8 @@ namespace PadawansTask8
             if (text == null) throw new ArgumentNullException();
             if (text.Length == 0) throw new ArgumentException();
 
-            string[] a = text.Split(new char[] { ' '});
+            string[] z = text.Split(new char[] { ' '}, StringSplitOptions.RemoveEmptyEntries);
+            string[] a = text.Split(new char[] { ' ','.',',','-','!','?',';',':' }, StringSplitOptions.RemoveEmptyEntries);
             int s = a.Length - 1;
             text = "";
 
@@ -28,12 +29,12 @@ namespace PadawansTask8
                 }
 
                 if (q == s && a[q]=="") break;
-                if (q == s && a[q] != "") { text += a[q]; break; }
+                if (q == s && a[q] != "") { text += z[q]; break; }
 
                 if (a[q] == "") text += " ";
                 else
                 {
-                    text += a[q] + " ";
+                    text += z[q] + " ";
                 }
             }
 
